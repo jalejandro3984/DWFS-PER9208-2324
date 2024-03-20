@@ -1,0 +1,31 @@
+.centrado{
+    background-color: rgb(39, 123, 197);
+    margin-top: 80px;
+    font-family:  Tahoma, Verdana, sans-serif, arial;
+    text-align: center;
+}
+
+div {
+    width: 80%;
+    margin: 0 auto;
+  }
+h2,h4{
+    color: white;
+}
+h3{
+    color:rgb(39, 123, 197);
+}
+
+p{
+    color: rgb(108, 108, 109);
+    font-size: medium;
+}
+.bordes{    
+    border-color: rgb(178, 176, 176);
+    text-align: 10px;
+    border-width: 1px;
+    box-shadow: 2px 3px rgb(178, 176, 176);
+    border-style: solid;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}

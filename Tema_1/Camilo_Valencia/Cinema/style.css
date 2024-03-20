@@ -1,0 +1,124 @@
+html
+{
+    background-color: #120024;    
+}
+
+body
+{
+    margin: 2%;
+    font-family: "Telex", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+td
+{
+    border: solid #7D00FF 1px;
+    width: 50px;
+    margin: 5px 15px 15px 5px;
+}
+
+td:active
+{
+    background-color: #7D00FF;
+}
+
+
+header, main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header
+{
+    height: 200px;
+    background-color: #A248FF;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+h1
+{
+    color: white;
+}
+.section__blankscreen
+{
+    height: 300px;
+    width: 100%;
+    background-color: #290054;
+    border-radius: 5px;
+}
+
+.section__cinemaRows
+{
+    margin-top: 20px;
+    height: 300px;
+}
+
+.td__occupied
+{
+    background-color: #7D00FF;
+}
+
+table
+{
+    border-spacing: 10px;
+    height: 100%;
+    color: white;
+}
+
+form
+{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+}
+
+form input
+{
+    padding: 10px;
+    border-radius: 9px;
+    text-align: center;
+}
+
+button
+{
+    background-color:#7D00FF;
+    border: none;
+    padding: 10px;
+    border-radius: 4px; 
+    color: white;
+    font-family: "Telex", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formField
+{
+    margin: 8px;
+}
+
+footer
+{
+    color: white;
+    background-color: #A248FF;
+}
+
+footer section
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 30px;
+}
+
+footer section div
+{
+    margin: 5px;
+}
