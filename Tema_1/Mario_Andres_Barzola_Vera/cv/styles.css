@@ -1,0 +1,67 @@
+section table{
+    border-collapse: separate;
+    border-spacing: 5px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+img{
+    width: 25%;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#TituloH1{
+    background-color: #fa3587;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+td > h3{
+    color: coral;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+}
+#tablaContacto{
+    color: rgb(43, 14, 4);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p.resumen--descripcion{
+    color: rgb(43, 14, 4);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ul > li{
+    color: rgb(55, 75, 28);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+li + p{
+    color: rgb(41, 20, 160);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+
+p.experiencia--descripcion1{
+    color: rgb(95, 32, 90);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p.experiencia--descripcion2{
+    color: rgb(95, 32, 90);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p.experiencia--descripcion3{
+    color: rgb(95, 32, 90);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul > li:hover{
+    background-color: #1c663b;
+    color: white;
+}
+td > h3:hover{
+    background-color: #dd7825;
+    color: white;
+}

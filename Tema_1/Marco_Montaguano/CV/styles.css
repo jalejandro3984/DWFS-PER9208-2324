@@ -1,0 +1,43 @@
+body{
+	font-family: arial;
+	font-size: 14px;
+}
+
+.dataflex{
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div img{
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+.centrado {
+	text-align: center
+}
+
+.infos{
+	margin-right: 25%;
+    margin-left: 25%;
+}
+
+.infos__info{
+	padding-bottom: 20px;
+    margin-top: 30px;
+    border-bottom: double;
+}
+
+.infos__info > h4 {
+	color: darkblue;
+}
+
+li{
+    font-size: small;
+}
+
+dt{
+	padding-top: 12px;
+}

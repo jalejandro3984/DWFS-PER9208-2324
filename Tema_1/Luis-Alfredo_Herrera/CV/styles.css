@@ -1,0 +1,35 @@
+.contenedor{
+    background-color: rgb(22, 21, 21);
+}
+.cv-text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.div{
+    background-color: rgb(248, 246, 246);
+    box-shadow: none;
+}
+.centro{
+ text-align: center;
+ background-color: rgb(30, 83, 83);
+ 
+}
+.fotografia{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 250px;
+    width: 200px;
+}
+.texto-header{
+    color: blanchedalmond;
+}
+
+div > p{
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+div > h3{
+    color: rgb(30, 83, 83);
+    border-left-width: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
