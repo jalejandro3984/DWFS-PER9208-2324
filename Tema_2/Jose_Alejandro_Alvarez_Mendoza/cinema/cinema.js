@@ -21,39 +21,39 @@ function setup() {
     return butacas;
 }
 
-function suggest(numSeats, seats) {
-    let selectedSeats = new Set();
+function suggest(numButacas, butacas) {
+    let butacasSeleccionados = new Set();
 
-    for (let i = seats.length - 1; i >= 0; i--) {
-        let row = seats[i];
+    for (let i = butacas.length - 1; i >= 0; i--) {
+        let fila = butacas[i];
 
-        if (numSeats > row.length) {
+        if (numButacas > fila.length) {
             continue;
         }
 
-        let freeSeatsCount = 0;
-        let tempSelectedSeats = [];
+        let contadorButacasLibres = 0;
+        let tempButacasSeleccionadas = [];
 
-        for (let j = 0; j < row.length; j++) {
-            if (!row[j].estado) {
-                freeSeatsCount++;
-                tempSelectedSeats.push(row[j].id);
+        for (let j = 0; j < fila.length; j++) {
+            if (!fila[j].estado) {
+                contadorButacasLibres++;
+                tempButacasSeleccionadas.push(fila[j].id);
             } else {
-                freeSeatsCount = 0;
-                tempSelectedSeats = [];
+                contadorButacasLibres = 0;
+                tempButacasSeleccionadas = [];
             }
 
-            if (freeSeatsCount === numSeats) {
-                for (const seat of tempSelectedSeats) {
-                    selectedSeats.add(seat);
+            if (contadorButacasLibres === numButacas) {
+                for (const seat of tempButacasSeleccionadas) {
+                    butacasSeleccionados.add(seat);
                 }
 
-                return selectedSeats;
+                return butacasSeleccionados;
             }
         }
     }
 
-    return selectedSeats;
+    return butacasSeleccionados;
 }
 
 // Inicializar la matriz
