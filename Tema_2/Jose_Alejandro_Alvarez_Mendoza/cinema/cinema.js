@@ -27,28 +27,26 @@ function suggest(numButacas, butacas) {
     for (let i = butacas.length - 1; i >= 0; i--) {
         let fila = butacas[i];
 
-        if (numButacas > fila.length) {
-            continue;
-        }
+        if (numButacas <= fila.length) {
+            let contadorButacasLibres = 0;
+            let tempButacasSeleccionadas = [];
 
-        let contadorButacasLibres = 0;
-        let tempButacasSeleccionadas = [];
+            for (let j = 0; j < fila.length; j++) {
+                if (butacasSeleccionados.size !== numButacas) {
+                    if (!fila[j].estado) {
+                        contadorButacasLibres++;
+                        tempButacasSeleccionadas.push(fila[j].id);
+                    } else {
+                        contadorButacasLibres = 0;
+                        tempButacasSeleccionadas = [];
+                    }
 
-        for (let j = 0; j < fila.length; j++) {
-            if (!fila[j].estado) {
-                contadorButacasLibres++;
-                tempButacasSeleccionadas.push(fila[j].id);
-            } else {
-                contadorButacasLibres = 0;
-                tempButacasSeleccionadas = [];
-            }
-
-            if (contadorButacasLibres === numButacas) {
-                for (const seat of tempButacasSeleccionadas) {
-                    butacasSeleccionados.add(seat);
+                    if (contadorButacasLibres === numButacas) {
+                        for (const seat of tempButacasSeleccionadas) {
+                            butacasSeleccionados.add(seat);
+                        }
+                    }
                 }
-
-                return butacasSeleccionados;
             }
         }
     }
