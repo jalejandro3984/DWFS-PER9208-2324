@@ -2,9 +2,6 @@ html * {
     font-family:'Times New Roman' !important;
 }
 
-body section{
-}
-
 .row{
     --bs-gutter-x: 0rem !important;
 }

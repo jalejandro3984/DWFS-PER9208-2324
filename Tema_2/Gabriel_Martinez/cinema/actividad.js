@@ -24,21 +24,17 @@ function setup() {
 // Función para sugerir butacas consecutivas
 function suggest(seats, qty){
     let seatSuggestion = [];
-    for (let i = 0; i < seats.length; i++){
-        let tempSuggestion = []
-        for (let j = 0; j < seats[i].length && tempSuggestion.length < qty; j++){
+    for (let i = seats.length - 1; i >= 0 && seatSuggestion.length < qty; i--){
+        for (let j = 0; j < seats[i].length && seatSuggestion.length < qty; j++){
             if (!seats[i][j].estado){
-                tempSuggestion.push(seats[i][j])
+                seatSuggestion.push(seats[i][j])
             }
             else{
-                tempSuggestion = []
+                seatSuggestion = []
             }
         }
-        if (tempSuggestion.length === qty){
-            seatSuggestion = tempSuggestion
-        }
     }
-    return seatSuggestion;
+    return seatSuggestion.length === qty ? seatSuggestion : [] ;
 }
 
 // Inicializar la matriz
@@ -47,16 +43,16 @@ let butacas = setup();
 // Imprimir la matriz
 console.log(butacas);
 
-butacas[3][0].estado = false;
-butacas[3][2].estado = false;
-butacas[3][3].estado = false;
+butacas[0][0].estado = false;
+butacas[0][2].estado = false;
+butacas[0][3].estado = false;
 
 butacas[3][0].estado = false;
-butacas[3][1].estado = true;
-butacas[3][3].estado = false;
-butacas[3][4].estado = false;
+butacas[3][1].estado = false;
+butacas[3][3].estado = true;
+butacas[3][4].estado = true;
 
-let seatSuggestion = suggest(butacas, 2);
+let seatSuggestion = suggest(butacas, 6);
 
 console.log(seatSuggestion);
 
