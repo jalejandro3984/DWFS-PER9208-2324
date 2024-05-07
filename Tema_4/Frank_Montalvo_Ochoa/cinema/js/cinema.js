@@ -18,46 +18,25 @@ function suggest(butacas, numeroAsientos) {
         return [];
     }
 
-    let asientos = [];
     let sugerencias = [];
     for (let row = ROWS - 1; row >= 0 && sugerencias.length < numeroAsientos; row--) {
-        for (let colunm = 0; colunm < COLUMNS && sugerencias.length < numeroAsientos; colunm++) {
-            const butaca = butacas[row][colunm];
-            if (butaca.estado === false) {
-                asientos.push(row);
-                sugerencias.push(butaca.id);
+        for (let colunm = 0; colunm < COLUMNS && (sugerencias.length < numeroAsientos)
+            && (COLUMNS - colunm >= numeroAsientos - sugerencias.length); colunm++) {
 
-                if (!sameRow(asientos)) {
-                    colunm = -1;
-                    asientos = [];
-                    sugerencias = [];
-                }
+            const butaca = butacas[row][colunm];
+
+            if (!butaca.estado) {
+                sugerencias.push(butaca.id);
             }
             else {
-                asientos = [];
                 sugerencias = [];
             }
 
         }
     }
 
-    return (sugerencias.length < numeroAsientos) ? [] : sugerencias;
+    return sugerencias;
 
-}
-
-function sameRow(asientos) {
-    if (asientos.length === 0) {
-        return true;
-    }
-
-    const primerElemento = asientos[0];
-    for (let i = 1; i < asientos.length; i++) {
-        if (asientos[i] !== primerElemento) {
-            return false;
-        }
-    }
-
-    return true;
 }
 
 function reserveSeat(butacas, reservas, reservar = false) {
@@ -156,3 +135,16 @@ btnReservation.addEventListener('click', () => {
     print(butacas);
     preSelected();
 });
+
+// Seleccionar asientos manualmente
+for (let i = 0; i < SEATS.length; i++) {
+    SEATS[i].addEventListener('click', function () {
+        const id = Number(this.getAttribute('id'));
+        if (this.classList.contains('--reserved')) {
+            alert(`El asiento ${id} ya está ocupado`);
+        } else if (confirm(`¿Reservar asiento: ${id}?`)) {
+            reserveSeat(butacas, [id], true);
+            preSelected();
+        }
+    });
+}

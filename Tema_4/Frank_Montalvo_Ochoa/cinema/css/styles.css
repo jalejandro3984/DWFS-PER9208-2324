@@ -41,6 +41,7 @@ body {
     border: 1px solid #999;
     text-align: center;
     color: #333;
+    cursor: pointer;
 }
 
 .seats__seat.--reserved {
